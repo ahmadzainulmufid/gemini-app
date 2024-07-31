@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gemini API</title>
+  <style>
+    .image-picker {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
+    .image-preview {
+      max-width: 300px;
+      margin-top: 10px;
+      display: none;
+    }
+    .chat-history {
+      margin-top: 20px;
+      max-height: 200px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    .chat-history .user {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Gemini API</h1>
+    <form>
+      <div class="image-picker">
+        <input type="file" id="fileInput" name="file" accept="image/*">
+        <img class="image-preview">
+      </div>
+      <div class="prompt-box">
+        <label>
+          <input name="prompt" placeholder="Enter instructions here" type="text" value="">
+        </label>
+        <button type="submit">Go</button>
+      </div>
+    </form>
+    <p class="output">(Results will appear here)</p>
+  </main>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
