@@ -95,17 +95,17 @@ form.onsubmit = async (ev) => {
 };
 
 // Function to display chat history
-// const displayChatHistory = () => {
-//   let historyContainer = document.querySelector('.chat-history');
-//   historyContainer.innerHTML = '';
-//   chatHistory.forEach(entry => {
-//     let role = entry.role === 'user' ? 'User' : 'Assistant';
-//     let div = document.createElement('div');
-//     div.className = entry.role;
-//     div.textContent = `${role}: ${entry.content}`;
-//     historyContainer.appendChild(div);
-//   });
-// };
+const displayChatHistory = () => {
+  let historyContainer = document.querySelector('.chat-history');
+  historyContainer.innerHTML = '';
+  chatHistory.forEach(entry => {
+    let role = entry.role === 'user' ? 'User' : 'Assistant';
+    let div = document.createElement('div');
+    div.className = entry.role;
+    div.textContent = `${role}: ${entry.content}`;
+    historyContainer.appendChild(div);
+  });
+};
 
 // You can delete this once you've filled out an API key
 maybeShowApiKeyBanner(API_KEY);
